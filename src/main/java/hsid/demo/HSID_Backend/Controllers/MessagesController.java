@@ -28,7 +28,6 @@ public class MessagesController {
        MessagesDto messagesDto = messagesService.getMessageById(code);
        return ResponseEntity.ok(messagesDto);
     }
-
 }
 
 
