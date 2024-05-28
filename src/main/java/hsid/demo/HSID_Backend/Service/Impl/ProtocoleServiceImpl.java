@@ -35,5 +35,4 @@ public class ProtocoleServiceImpl implements ProtocoleService {
         }
         return ProtocoleMapper.mapToProtocoleDto(protocole);
     }
-
 }
