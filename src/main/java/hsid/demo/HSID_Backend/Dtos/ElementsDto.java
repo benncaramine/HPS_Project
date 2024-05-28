@@ -20,6 +20,5 @@ public class ElementsDto {
     Long elementnumber;
     String attribute;
     String description;
-    @ManyToOne
-    Messages message;
+
 }

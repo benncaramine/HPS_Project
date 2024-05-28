@@ -9,16 +9,14 @@ public class ElementsMapper {
         return new ElementsDto(
                 elements.getElementnumber(),
                 elements.getAttribute(),
-                elements.getDescription(),
-                elements.getMessage()
+                elements.getDescription()
         );
     }
     public static Elements mapToElements(ElementsDto elementsDto){
         return new Elements(
                 elementsDto.getElementnumber(),
                 elementsDto.getAttribute(),
-                elementsDto.getDescription(),
-                elementsDto.getMessage()
+                elementsDto.getDescription()
         );
     }
 }

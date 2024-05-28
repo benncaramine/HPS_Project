@@ -18,8 +18,6 @@ public class Elements {
     Long elementnumber;
     String attribute;
     String description;
-    @ManyToOne
-    Messages message;
 
 }
 
