@@ -1,11 +1,8 @@
 package hsid.demo.HSID_Backend.Service.Impl;
 
 import hsid.demo.HSID_Backend.Dtos.MessagesDto;
-import hsid.demo.HSID_Backend.Dtos.ProtocoleDto;
 import hsid.demo.HSID_Backend.Entities.Messages;
-import hsid.demo.HSID_Backend.Entities.Protocole;
 import hsid.demo.HSID_Backend.Mappers.MessagesMapper;
-import hsid.demo.HSID_Backend.Mappers.ProtocoleMapper;
 import hsid.demo.HSID_Backend.Repository.MessagesRepository;
 import hsid.demo.HSID_Backend.Service.MessagesService;
 import jakarta.persistence.EntityNotFoundException;
@@ -37,6 +34,9 @@ public class MessagesServiceImpl implements MessagesService {
         }
         return MessagesMapper.mapToMessagesDto(messages);
     }
-
+    @Override
+    public List<Messages> getMessagesByprotocol(String nomprotocole) {
+        return messagesRepository.findByNomprotocole(nomprotocole);
+    }
 
 }

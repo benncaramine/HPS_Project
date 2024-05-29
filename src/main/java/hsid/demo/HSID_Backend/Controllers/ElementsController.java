@@ -15,7 +15,7 @@ import java.util.List;
 public class ElementsController {
 
     private ElementsService elementsService;
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/attribute")
     public List<Element> getSpecificAttribute(@RequestParam String attribute) {
         return elementsService.getSpecificAttribute(attribute);
