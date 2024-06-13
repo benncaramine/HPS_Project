@@ -17,15 +17,12 @@ import java.util.stream.Collectors;
 public class MessagesServiceImpl implements MessagesService {
     private MessagesRepository messagesRepository;
 
-
     @Override
     public List<MessagesDto> getMessages() {
         List<Messages> message = messagesRepository.findAll();
         return message.stream().map((messages) -> MessagesMapper.mapToMessagesDto(messages))
                 .collect(Collectors.toList());
-
     }
-
     @Override
     public MessagesDto getMessageById(String code) {
         Messages messages = messagesRepository.findByCode(code);
@@ -38,5 +35,4 @@ public class MessagesServiceImpl implements MessagesService {
     public List<Messages> getMessagesByprotocol(String nomprotocole) {
         return messagesRepository.findByNomprotocole(nomprotocole);
     }
-
 }

@@ -10,5 +10,4 @@ public class HsidBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HsidBackendApplication.class, args);
 	}
-
 }
